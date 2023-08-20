@@ -1,0 +1,19 @@
+Website: example.com
+Username: johnsmith
+Password: Dl$9j2#nA4!b
+
+Website: socialnetwork.com
+Username: user123
+Password: X8#pW7v9@Q5!r
+
+Website: bankingportal.com
+Username: bankinguser
+Password: Lm@5xJ6!gP3$c
+
+Website: emailprovider.com
+Username: janesmith
+Password: N9!cF4#eS2^v
+
+Website: onlineshopping.com
+Username: shopaholic
+Password: K7!bH2%wR4*s

@@ -1,0 +1,247 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+			"name": "Typescript",
+			"folders": [
+				{
+					"order": [
+						"2da71cf6-bddf-4824-8780-2c7a8068001b",
+						"cbf9a725-6450-4d93-af46-9d81a979a26b",
+						"2eb58194-4721-4eaf-8b60-3b776f8edc9f",
+						"cbfe3f65-4779-43c5-89a3-10216b2f464b",
+						"ca316eff-8dec-484b-b3fd-ce922da815be"
+					],
+					"name": "Laravel",
+					"id": "622e5d1b-d709-4d5a-ac42-1b49a50bb95d",
+					"collection_name": "",
+					"collection_id": "",
+					"collection": "",
+					"owner": 0
+				},
+				{
+					"order": [
+						"2e61ccf7-9540-4beb-9990-df897a505360",
+						"3f7fd47e-ede6-4ebb-bb93-1ae462e3e1ce",
+						"9876a3a9-18e7-4740-88e0-45d08d66e40d",
+						"f2fc3def-b675-4660-ac0a-489c40fa429e",
+						"11110d3c-3e80-4ef3-ab23-f986c7fedef1"
+					],
+					"name": "Flask",
+					"id": "16f3495a-5271-453c-a7dd-3b368621c78d",
+					"collection_name": "",
+					"collection_id": "",
+					"collection": "",
+					"owner": 0
+				},
+				{
+					"order": [
+						"6c24deab-c193-49e2-9df6-608c16ad1011",
+						"54562bfb-79fd-4c28-9f60-17703cf3be59",
+						"b9338281-cf93-49e6-8058-d0ced8376c5a",
+						"3e0ae85d-32b9-499a-8faa-edaad6edaf83",
+						"3cee9458-976a-4760-8432-b93b84c42eb9"
+					],
+					"name": "Typescript",
+					"id": "aedb921d-4646-48af-9692-24ade9df5472",
+					"collection_name": "",
+					"collection_id": "",
+					"collection": "",
+					"owner": 0
+				}
+			],
+			"requests": [
+				{
+					"id": "2da71cf6-bddf-4824-8780-2c7a8068001b",
+					"url": "http://localhost:8000/cross-site-scripting?name=Luca<script>alert(\"You have been hacked!\");</script>",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Cross Site Scripting (Laravel)",
+					"description": "",
+					"headers": "Content-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "622e5d1b-d709-4d5a-ac42-1b49a50bb95d"
+				},
+				{
+					"id": "cbf9a725-6450-4d93-af46-9d81a979a26b",
+					"url": "http://localhost:8000/denial-of-service",
+					"method": "POST",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Denial Of Service (Laravel)",
+					"description": "",
+					"headers": "Content-Type: application/json",
+					"dataMode": "raw",
+					"data": "[\n  {\n    \"name\": \"User 1\"\n  },\n  {\n    \"name\": \"User 2\"\n  }\n]",
+					"folder": "622e5d1b-d709-4d5a-ac42-1b49a50bb95d"
+				},
+				{
+					"id": "2eb58194-4721-4eaf-8b60-3b776f8edc9f",
+					"url": "http://localhost:8000/path-traversal?category=../passwds.txt",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Path Traversal (Laravel)",
+					"description": "",
+					"headers": "Accept: application/json\nContent-Type: application/json",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "622e5d1b-d709-4d5a-ac42-1b49a50bb95d"
+				},
+				{
+					"id": "cbfe3f65-4779-43c5-89a3-10216b2f464b",
+					"url": "http://localhost:8000/remote-code-execution?amount=error_log('You have been hacked!'); 10",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Remote Code Execution (Laravel)",
+					"description": "",
+					"headers": "Content-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "622e5d1b-d709-4d5a-ac42-1b49a50bb95d"
+				},
+				{
+					"id": "ca316eff-8dec-484b-b3fd-ce922da815be",
+					"url": "http://localhost:8000/sql-injection?search=RANDOMCHARACTERSWHICHNEVERMATCH%' UNION SELECT FirstName, LastName from customers WHERE LastName LIKE '%",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "SQL Injection (Laravel)",
+					"description": "",
+					"headers": "Accept: application/json\nContent-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "622e5d1b-d709-4d5a-ac42-1b49a50bb95d"
+				},
+				{
+					"id": "2e61ccf7-9540-4beb-9990-df897a505360",
+					"url": "http://localhost:5000/cross-site-scripting?name=Luca<script>alert(\"You have been hacked!\");</script>",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Cross Site Scripting (Flask)",
+					"description": "",
+					"headers": "Content-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "16f3495a-5271-453c-a7dd-3b368621c78d"
+				},
+				{
+					"id": "3f7fd47e-ede6-4ebb-bb93-1ae462e3e1ce",
+					"url": "http://localhost:5000/denial-of-service",
+					"method": "POST",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Denial Of Service (Flask)",
+					"description": "",
+					"headers": "Content-Type: application/json",
+					"dataMode": "raw",
+					"data": "[\n  {\n    \"name\": \"User 1\"\n  },\n  {\n    \"name\": \"User 2\"\n  }\n]",
+					"folder": "16f3495a-5271-453c-a7dd-3b368621c78d"
+				},
+				{
+					"id": "9876a3a9-18e7-4740-88e0-45d08d66e40d",
+					"url": "http://localhost:5000/path-traversal?category=../passwds.txt",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Path Traversal (Flask)",
+					"description": "",
+					"headers": "Accept: application/json\nContent-Type: application/json",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "16f3495a-5271-453c-a7dd-3b368621c78d"
+				},
+				{
+					"id": "f2fc3def-b675-4660-ac0a-489c40fa429e",
+					"url": "http://localhost:5000/remote-code-execution?amount=print('You have been hacked!')",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Remote Code Execution (Flask)",
+					"description": "",
+					"headers": "Content-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "16f3495a-5271-453c-a7dd-3b368621c78d"
+				},
+				{
+					"id": "11110d3c-3e80-4ef3-ab23-f986c7fedef1",
+					"url": "http://localhost:5000/sql-injection?search=RANDOMCHARACTERSWHICHNEVERMATCH%' UNION SELECT FirstName, LastName from customers WHERE LastName LIKE '%",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "SQL Injection (Flask)",
+					"description": "",
+					"headers": "Accept: application/json\nContent-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "16f3495a-5271-453c-a7dd-3b368621c78d"
+				},
+				{
+					"id": "6c24deab-c193-49e2-9df6-608c16ad1011",
+					"url": "http://localhost:3000/cross-site-scripting?name=Luca<script>alert(\"You have been hacked!\");</script>",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Cross Site Scripting (Express)",
+					"description": "",
+					"headers": "Content-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "aedb921d-4646-48af-9692-24ade9df5472"
+				},
+				{
+					"id": "54562bfb-79fd-4c28-9f60-17703cf3be59",
+					"url": "http://localhost:3000/denial-of-service",
+					"method": "POST",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Denial Of Service (Express)",
+					"description": "",
+					"headers": "Content-Type: application/json",
+					"dataMode": "raw",
+					"data": "[\n  {\n    \"name\": \"User 1\"\n  },\n  {\n    \"name\": \"User 2\"\n  }\n]",
+					"folder": "aedb921d-4646-48af-9692-24ade9df5472"
+				},
+				{
+					"id": "b9338281-cf93-49e6-8058-d0ced8376c5a",
+					"url": "http://localhost:3000/path-traversal?category=../passwds.txt",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Path Traversal (Express)",
+					"description": "",
+					"headers": "Accept: application/json\nContent-Type: application/json",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "aedb921d-4646-48af-9692-24ade9df5472"
+				},
+				{
+					"id": "3e0ae85d-32b9-499a-8faa-edaad6edaf83",
+					"url": "http://localhost:3000/remote-code-execution?amount=console.log('You have been hacked!'); 10",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "Remote Code Execution (Express)",
+					"description": "",
+					"headers": "Content-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "aedb921d-4646-48af-9692-24ade9df5472"
+				},
+				{
+					"id": "3cee9458-976a-4760-8432-b93b84c42eb9",
+					"url": "http://localhost:3000/sql-injection?search=RANDOMCHARACTERSWHICHNEVERMATCH%' UNION SELECT FirstName, LastName from customers WHERE LastName LIKE '%",
+					"method": "GET",
+					"collectionId": "cfa49d3c-22dd-47db-89ed-f11723b2cb36",
+					"name": "SQL Injection (Express)",
+					"description": "",
+					"headers": "Accept: application/json\nContent-Type: text/plain",
+					"dataMode": "raw",
+					"data": "",
+					"folder": "aedb921d-4646-48af-9692-24ade9df5472"
+				}
+			],
+			"order": []
+		}
+	],
+	"environments": [
+		{
+			"id": "d656b3c4-a59d-4f1f-872d-9873fd058b60",
+			"name": "API-Flow Imports",
+			"values": [],
+			"timestamp": 1692561830485
+		}
+	]
+}

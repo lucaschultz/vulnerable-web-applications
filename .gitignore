@@ -1,0 +1,6 @@
+.DS_Store
+/assets/chinook.db
+__pycache__
+.venv
+dist
+node_modules
