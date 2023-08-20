@@ -14,7 +14,7 @@ The vulnerabilities in this application are implemented in a straightforward man
 
 ### Example Database
 
-The execution of the `sql-injection` enpoint depends on the [example database](https://www.sqlitetutorial.net/sqlite-sample-database/) from [SQLITE TUTORIAL](https://www.sqlitetutorial.net). Download the file and move it into the [￼`assets`￼ directory](./assets) as:
+The execution of the `sql-injection` enpoint depends on the [example database](https://www.sqlitetutorial.net/sqlite-sample-database/) from [SQLITE TUTORIAL](https://www.sqlitetutorial.net). Download the file and move it into the [`assets` directory](./assets) as:
 
 ```txt
 assets/chinook.db
@@ -24,7 +24,7 @@ The file is not included in this repository as the SQLITE TUTORIAL does not spec
 
 ### Express Application
 
-Ensure you have [Node.js](https://nodejs.org/en) installed. We suggest using [nvm](https://github.com/nvm-sh/nvm) for installation if you have not done so already. Once Node.js is installed, open your shell and navigate to the ￼`express-application`￼ directory. Run ￼
+Ensure you have [Node.js](https://nodejs.org/en) installed. We suggest using [nvm](https://github.com/nvm-sh/nvm) for installation if you have not done so already. Once Node.js is installed, open your shell and navigate to the [`express_application` directory](./express_application). Run
 
 ```sh
 npm install
@@ -36,17 +36,17 @@ to install the necessary dependencies. After the dependencies are installed, you
 npm run dev￼ 
 ```
 
-or build the application using ￼`npm run build`￼ and start the dist version using ￼`npm run start`. By default the Express application will run on ￼`http://localhost:3000`￼.
+or build the application using `npm run build` and start the dist version using `npm run start`. By default the Express application will run on `http://localhost:3000`.
 
 ### Laravel Application
 
-Ensure you have [PHP](https://www.php.net/manual/en/install.php) and [composer](https://getcomposer.org/doc/00-intro.md) installed. We suggest doing so using [Herd](https://herd.laravel.com/) for Laravel development if you’re using macOS. Otherwise follow the installation instructions on the respective hompages. Once bothe are installed, open your shell and navigate to the ￼`laravel-application`￼ directory. Run ￼
+Ensure you have [PHP](https://www.php.net/manual/en/install.php) and [composer](https://getcomposer.org/doc/00-intro.md) installed. We suggest doing so using [Herd](https://herd.laravel.com/) for Laravel development if you’re using macOS. Otherwise follow the installation instructions on the respective hompages. Once bothe are installed, open your shell and navigate to the [`laravel_application` directory](./laravel_application). Run
 
 ```sh
 composer install
 ```
 
-to install the necessary dependencies. After the dependencies are installed,  create your environment file and application key using:
+to install the necessary dependencies. After the dependencies are installed, create your environment file and application key using:
 
 ```sh
 cp .env.example .env # use the example environment file
@@ -59,11 +59,11 @@ You can now start the Laravel application using:
 php artisan serve
 ```
 
-By default the Laravel application will run on ￼`http://localhost:8000`￼.
+By default the Laravel application will run on `http://localhost:8000`.
 
 ### Flask Application
 
-Ensure you have [Python 3](￼) installed. We recommend using [pyenv](￼) for installation if you have not done so already. Once Node.js is installed, open your shell and navigate to the ￼￼`flask-application`￼￼ directory. To create a [virtual environment](￼), run the following command:
+Ensure you have [Python 3](https://www.python.org/) installed. We recommend using [pyenv](https://github.com/pyenv/pyenv) for installation if you have not done so already. Once Node.js is installed, open your shell and navigate to the [`flask_application` directory](./flask_application). To create a [virtual environment](https://docs.python.org/3/library/venv.html), run the following command:
 
 ```sh
 python3 -m venv .venv
@@ -82,7 +82,7 @@ Once the dependencies are installed, you can start the Flask application using:
 flask --app main run
 ```
 
-By default the Flask application will run on ￼`http://localhost:5000`￼.
+By default the Flask application will run on `http://localhost:5000`.
 
 ## Exploitation
 
@@ -96,10 +96,11 @@ Each application opens the default port of its respective framework. Refer to th
 
 ### Example Requests
 
-With the notable exception of the denial-of-service vulnerability[^1], we provide example requests that implement the exploits of each application.
+With the notable exception of the denial-of-service vulnerability[^1], we provide example requests[^2] that implement the exploits of each application.
 
-- The [￼`example-requests.sh`￼ file](./example-requests/example-requests.sh) contains commands to execute the requests using [curl](https://curl.se/).
-- If you're using macOS, we recommend using [RapidAPI for Mac](https://paw.cloud/) and provide an [￼`example-requests.paw`￼ file](./example-requests/example-requests.paw) to import the example requests into RapidAPI.
-- If you are using [Postman](https://www.postman.com/), you can import the example requests using the [￼`example-requests.json`￼ file](./example-requests/example-requests.json).
+- The [`example-requests.sh` file](./example_requests/example_requests.sh) contains commands to execute the requests using [curl](https://curl.se/).
+- If you're using macOS, we recommend using [RapidAPI for Mac](https://paw.cloud/) and provide an [`example-requests.paw` file](./example_requests/example_requests.paw) to import the example requests into RapidAPI.
+- If you are using [Postman](https://www.postman.com/), you can import the example requests using the [`example-requests.json` file](./example_requests/example_requests.json).
 
- [^1]: We chose not to provide an example of a Denial of Service (DoS) exploit, as the effectiveness of the exploit is highly dependent on the machine it is running on. We did, however, reproduce the DoS exploit of each application on our own machines.
+[^1]: We chose not to provide an example of a Denial of Service (DoS) exploit, as the effectiveness of the exploit is highly dependent on the machine it is running on. We did, however, reproduce the DoS exploit of each application on our own machines.
+[^2]: We recommend opening the example request URL of the cross-site scripting exploits in a browser to see the exploit in action.
