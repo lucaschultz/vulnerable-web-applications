@@ -1,9 +1,9 @@
 from flask import Blueprint, request
 
-path_traversal = Blueprint('path_traversal', __name__)
+example_data = Blueprint('example_data', __name__)
 
 
-@path_traversal.route("/path-traversal")
+@example_data.route("/example-data")
 def get_example_data():
     category = request.args.get("category")
     try:

@@ -1,7 +1,7 @@
 from flask import Blueprint, g, request, jsonify
 import sqlite3
 
-sql_injection = Blueprint('sql_injection', __name__)
+genres = Blueprint('genres', __name__)
 
 
 def get_db():
@@ -17,7 +17,7 @@ def close_connection(error):
         db.close()
 
 
-@sql_injection.route("/sql-injection")
+@genres.route("/genres")
 def get_genres():
     db = get_db()
     cursor = db.cursor()

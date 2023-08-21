@@ -21,33 +21,33 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::name('issues › ')
     ->group(function () {
-        Route::name('cross-site-scripting')
-            ->prefix('cross-site-scripting')
+    Route::name('greet')
+        ->prefix('greet')
             ->group(
-                __DIR__ . '/issues/cross-site-scripting.php'
+        __DIR__ . '/issues/greet.php'
             );
 
-        Route::name('denial-of-service')
-            ->prefix('denial-of-service')
+    Route::name('list-users')
+    ->prefix('list-users')
             ->group(
-                __DIR__ . '/issues/denial-of-service.php'
+        __DIR__ . '/issues/list-users.php'
             );
 
-        Route::name('path-traversal')
-            ->prefix('path-traversal')
+    Route::name('example-data')
+    ->prefix('example-data')
             ->group(
-                __DIR__ . '/issues/path-traversal.php'
+        __DIR__ . '/issues/example-data.php'
             );
 
-        Route::name('remote-code-execution')
-            ->prefix('remote-code-execution')
+    Route::name('hello')
+        ->prefix('hello')
             ->group(
-                __DIR__ . '/issues/remote-code-execution.php'
+        __DIR__ . '/issues/hello.php'
             );
 
-        Route::name('sql-injection')
-            ->prefix('sql-injection')
+    Route::name('genres')
+        ->prefix('genres')
             ->group(
-                __DIR__ . '/issues/sql-injection.php'
+        __DIR__ . '/issues/genres.php'
             );
     });

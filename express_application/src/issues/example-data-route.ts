@@ -1,9 +1,9 @@
 import { Router } from "express";
 import * as fs from "fs";
 
-const pathTraversalRoute = Router();
+const exampleDataRoute = Router();
 
-pathTraversalRoute.get("/path-traversal", (req, res) => {
+exampleDataRoute.get("/example-data", (req, res) => {
   fs.readFile(`../assets/public/${req.query.category}`, "utf8", (err, data) => {
     if (err) {
       if (err.code === "ENOENT") {
@@ -22,4 +22,4 @@ pathTraversalRoute.get("/path-traversal", (req, res) => {
   });
 });
 
-export default pathTraversalRoute;
+export default exampleDataRoute;

@@ -1,6 +1,6 @@
 import express, { Router } from "express";
 
-const denialOfServiceRoute = Router();
+const listUsersRoute = Router();
 
 class ValidationError extends Error {
   constructor(message: string) {
@@ -39,27 +39,23 @@ async function work(user: { name: string }) {
   return user.name;
 }
 
-denialOfServiceRoute.post(
-  "/denial-of-service",
-  express.json(),
-  async (req, res) => {
-    try {
-      const users = validateUserArray(req.body);
-      const names = [];
+listUsersRoute.post("/list-users", express.json(), async (req, res) => {
+  try {
+    const users = validateUserArray(req.body);
+    const names = [];
 
-      for (const user of users) {
-        names.push(await work(user));
-      }
+    for (const user of users) {
+      names.push(await work(user));
+    }
 
-      res.send(names.join(", "));
-    } catch (err) {
-      if (err instanceof ValidationError) {
-        res.status(400).send(err.message);
-      } else {
-        res.status(500).send("An unexpected error occurred");
-      }
+    res.send(names.join(", "));
+  } catch (err) {
+    if (err instanceof ValidationError) {
+      res.status(400).send(err.message);
+    } else {
+      res.status(500).send("An unexpected error occurred");
     }
   }
-);
+});
 
-export default denialOfServiceRoute;
+export default listUsersRoute;

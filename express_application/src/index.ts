@@ -1,18 +1,18 @@
 import express from "express";
 
-import crossSiteScriptingRoute from "./issues/cross-site-scripting-route";
-import denialOfServiceRoute from "./issues/denial-of-service-route";
-import pathTraversalRoute from "./issues/path-traversal-route";
-import remoteCodeExecutionRoute from "./issues/remote-code-execution-route";
-import sqlInjectionRoute from "./issues/sql-injection-route";
+import exampleDataRoute from "./issues/example-data-route";
+import genresRoute from "./issues/genres-route";
+import greetRoute from "./issues/greet-route";
+import helloRoute from "./issues/hello-route";
+import listUsersRoute from "./issues/list-users-route";
 
 const app = express();
 
-app.use(crossSiteScriptingRoute);
-app.use(denialOfServiceRoute);
-app.use(pathTraversalRoute);
-app.use(remoteCodeExecutionRoute);
-app.use(sqlInjectionRoute);
+app.use(greetRoute);
+app.use(listUsersRoute);
+app.use(exampleDataRoute);
+app.use(helloRoute);
+app.use(genresRoute);
 
 app.listen(3000, () => {
   console.log("Server started on http://localhost:3000");

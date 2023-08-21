@@ -1,11 +1,11 @@
 import { Router } from "express";
 import sqlite3 from "sqlite3";
 
-const sqlInjectionRoute = Router();
+const genresRoute = Router();
 
 const db = new sqlite3.Database("../assets/chinook.db");
 
-sqlInjectionRoute.get("/sql-injection", (req, res) => {
+genresRoute.get("/genres", (req, res) => {
   db.all(
     `SELECT * FROM genres WHERE name LIKE '%${req.query.search}%'`,
     (err, rows) => {
@@ -18,4 +18,4 @@ sqlInjectionRoute.get("/sql-injection", (req, res) => {
   );
 });
 
-export default sqlInjectionRoute;
+export default genresRoute;

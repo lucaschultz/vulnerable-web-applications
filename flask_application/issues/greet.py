@@ -1,10 +1,10 @@
 from flask import Blueprint, request
 
-cross_site_scripting = Blueprint('cross_site_scripting', __name__)
+greet = Blueprint('greet', __name__)
 
 
-@cross_site_scripting.route("/cross-site-scripting")
-def get_greeting():
+@greet.route("/greet")
+def get_greet():
     name = request.args.get("name", "")
 
     html = """

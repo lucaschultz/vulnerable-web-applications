@@ -2,7 +2,7 @@ import asyncio
 from flask import Blueprint, request
 import json
 
-denial_of_service = Blueprint('denial_of_service', __name__)
+list_users = Blueprint('list_users', __name__)
 
 
 class ValidationError(Exception):
@@ -37,8 +37,8 @@ async def work(user):
     return user['name']
 
 
-@denial_of_service.route('/denial-of-service', methods=['POST'])
-async def list_users():
+@list_users.route('/list-users', methods=['POST'])
+async def post_list_users():
     try:
         users = validate_user_array(request.get_json())
         names = []

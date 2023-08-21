@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-const crossSiteScriptingRoute = Router();
+const greetRoute = Router();
 
-crossSiteScriptingRoute.get("/cross-site-scripting", (req, res) => {
+greetRoute.get("/greet", (req, res) => {
   const name = req.query.name || "";
 
   const html = `
@@ -20,4 +20,4 @@ crossSiteScriptingRoute.get("/cross-site-scripting", (req, res) => {
   res.send(html);
 });
 
-export default crossSiteScriptingRoute;
+export default greetRoute;
