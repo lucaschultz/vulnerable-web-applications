@@ -30,7 +30,7 @@ Ensure you have [Node.js](https://nodejs.org/en) installed. We suggest using [nv
 npm install
 ```
 
-to install the necessary dependencies. After the dependencies are installed, you can start the Express.js server using :
+to install the necessary dependencies. After the dependencies are installed, you can start the Express.js server using:
 
 ```sh
 npm run dev￼ 
