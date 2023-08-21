@@ -1,6 +1,6 @@
 # Vulnerable Web Applications
 
-This repository contains three server applications - Express, Flask, and Laravel - that each have the same five security vulnerabilities implemented:
+This repository contains three server applications written in Express.js, Flask, and Laravel, respectively. Each of these applications has the same five security vulnerabilities implemented:
 
 - Cross-site scripting
 - Denial of service
@@ -8,19 +8,19 @@ This repository contains three server applications - Express, Flask, and Laravel
 - Remote code execution
 - SQL injection
 
-The vulnerabilities in this application are implemented in a straightforward manner, making them easy to identify by experienced programmers. It is important to note that the applications may contain other security issues that are not intended. Therefore, it is not recommended to use any of the code from this application as a model for building your own application; **this code is an example of what not to do**.
+The vulnerabilities in these applications are implemented in a straightforward manner, making them easy to identify by experienced programmers. It is important to note that the applications may contain other security issues that are unintended. Therefore, it is not recommended to use any of the code from these applications as a model for building your own application. **This code is an example of what not to do.**
 
 ## Installation
 
 ### Example Database
 
-The execution of the `sql-injection` enpoint depends on the [example database](https://www.sqlitetutorial.net/sqlite-sample-database/) from [SQLITE TUTORIAL](https://www.sqlitetutorial.net). Download the file and move it into the [`assets` directory](./assets) as:
+The execution of the `sql-injection` enpoint depends on the [example database](https://www.sqlitetutorial.net/sqlite-sample-database/) from [SQLite Tutorial](https://www.sqlitetutorial.net). Download the file and move it into the [`assets` directory](./assets) as:
 
 ```txt
 assets/chinook.db
 ```
 
-The file is not included in this repository as the SQLITE TUTORIAL does not specify a license for the database. If they allow, we may add the file to the repository in a future commit.
+The file is not included in this repository as SQLite Tutorial does not specify a license for the database. If they allow, we may add the file to the repository in a future commit.
 
 ### Express Application
 
@@ -46,11 +46,16 @@ Ensure you have [PHP](https://www.php.net/manual/en/install.php) and [composer](
 composer install
 ```
 
-to install the necessary dependencies. After the dependencies are installed, create your environment file and application key using:
+to install the necessary dependencies. After the dependencies are installed, create your environment file:
 
 ```sh
-cp .env.example .env # use the example environment file
-php artisan key:generate # generate the application key
+cp .env.example .env
+```
+
+and application key:
+
+```sh
+php artisan key:generate
 ```
 
 You can now start the Laravel application using:
@@ -69,11 +74,16 @@ Ensure you have [Python 3](https://www.python.org/) installed. We recommend usin
 python3 -m venv .venv
 ```
 
-Activate the virtual environment and install the dependencies by running:
+Activate the virtual environment:
 
 ```sh
-source .venv/bin/activate # activate the virtual environment
-pip install -r requirements.txt # install the dependencies
+source .venv/bin/activate
+```
+
+and install the dependencies by running:
+
+```sh
+pip install -r requirements.txt
 ```
 
 Once the dependencies are installed, you can start the Flask application using:
