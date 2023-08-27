@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Vulnerable Web Applications
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Luca
+    family-names: Schultz
+    email: luca.schultz@icloud.com
+abstract: >-
+  The repository encompasses three server applications
+  developed using Express.js, Flask, and Laravel frameworks,
+  correspondingly. Each of these applications incorporates a
+  set of five security vulnerabilities. These applications
+  serve as a convenient and user-friendly platform for
+  conducting penetration testing exercises, as well as for
+  identifying and resolving prevalent security concerns.
+keywords:
+  - security
+  - web application
+  - penetration testing
+  - CWE-89
+  - CWE-79
+  - CWE-400
+  - CWE-22
+  - CWE-94
+license: Zlib
+commit: 374573300e3569df982cd023a71d1c65f55d45d2
+version: '1.0'
+date-released: '2023-08-20'
