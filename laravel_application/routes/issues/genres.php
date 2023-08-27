@@ -6,10 +6,9 @@ use Illuminate\Support\Facades\DB;
 Route::get('/', function () {
   $search = request()->query('search', '');
 
-  $rows = DB::select("SELECT * FROM genres WHERE name LIKE '%{$search}%'");
-  return response()->json($rows);
-
   try {
+    $rows = DB::select("SELECT * FROM genres WHERE name LIKE '%{$search}%'");
+    return response()->json($rows);
   } catch (\Exception) {
     return response('An unexpected error occurred', 500);
   }
