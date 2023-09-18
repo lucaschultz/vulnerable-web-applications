@@ -5,11 +5,13 @@
 
 This repository contains three server applications written in Express.js, Flask, and Laravel, respectively. Each of these applications has the same five security vulnerabilities implemented:
 
-- Cross-site scripting
-- Denial of service
-- Path traversal
-- Remote code execution
-- SQL injection
+| Vulnerability                                              | Description                                                                        | Endpoint        |
+|------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------|
+| [CWE-89](https://cwe.mitre.org/data/definitions/89.html)   | Improper Neutralization of Special Elements used in an SQL Command (SQL Injection) | `/genres`       |
+| [CWE-79](https://cwe.mitre.org/data/definitions/79.html)   | Improper Neutralization of Input During Web Page Generation (Cross-site Scripting) | `/greet`        |
+| [CWE-400](https://cwe.mitre.org/data/definitions/400.html) | Uncontrolled Resource Consumption (Denial od Service)                              | `/list-users`   |
+| [CWE-22](https://cwe.mitre.org/data/definitions/22.html)   | Improper Limitation of a Pathname to a Re- stricted Directory (Path Traversal)     | `/example-data` |
+| [CWE-94](https://cwe.mitre.org/data/definitions/94.html)   | Improper Control of Generation of Code (Co- de Injection)                          | `/hello`        |
 
 The vulnerabilities in these applications are implemented in a straightforward manner, making them easy to identify by experienced programmers. It is important to note that the applications may contain other security issues that are unintended. Therefore, it is not recommended to use any of the code from these applications as a model for building your own application. **This code is an example of what not to do.**
 
