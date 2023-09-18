@@ -1,7 +1,7 @@
 # Vulnerable Web Applications
 
 > [!NOTE]
-> This repository was created for the project group [ChatGPT vs. Science](https://www.uni-bonn.de/en) at the [Rheinische Friedrich-Wilhelms-Universität Bonn](https://www.uni-bonn.de/en). The group was supervised by [Dr. Christian Tiefenau](https://christiantiefenau.de/). The code snippets were used to test the viability of using ChatGPT (`gpt-3.5-turbo-16k`) for security-oriented code reviews in the context of easily identifiable security issues.
+> This repository was created for the project group [ChatGPT vs. Science](https://besec.uni-bonn.de/course/ss23labpgsem/chatgpt/) at the [Rheinische Friedrich-Wilhelms-Universität Bonn](https://www.uni-bonn.de/en). The group was supervised by [Dr. Christian Tiefenau](https://christiantiefenau.de/). The code snippets were used to test the viability of using ChatGPT (`gpt-3.5-turbo-16k`) for security-oriented code reviews in the context of easily identifiable security issues.
 
 This repository contains three server applications written in Express.js, Flask, and Laravel, respectively. Each of these applications has the same five security vulnerabilities implemented:
 
